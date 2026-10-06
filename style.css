@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Maison Élégance | Bolsos de Lujo</title>
+
+  <style>
+
+    /* =====================================================
+       ESTILOS GENERALES
+    ===================================================== */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background-color: #f7f3ed;
+      color: #332e29;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    /* =====================================================
+       BANNER PRINCIPAL
+    ===================================================== */
+
+    .hero {
+      min-height: 500px;
+
+      display: flex;
+      align-items: center;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(28, 26, 24, 0.96) 0%,
+          rgba(28, 26, 24, 0.86) 45%,
+          rgba(28, 26, 24, 0.45) 100%
+        ),
+        url("https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1800&q=85");
+
+      background-size: cover;
+      background-position: center;
+
+      color: #f7f3ed;
+      padding: 70px 9%;
+    }
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .eyebrow {
+      color: #b89b62;
+
+      font-family: Arial, sans-serif;
+
+      font-size: 12px;
+
+      letter-spacing: 5px;
+
+      margin-bottom: 20px;
+
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: 68px;
+
+      font-weight: 400;
+
+      letter-spacing: 5px;
+
+      line-height: 1;
+
+      margin: 0 0 20px;
+
+      color: #f7f3ed;
+    }
+
+    .hero-slogan {
+      font-size: 21px;
+
+      line-height: 1.6;
+
+      color: #e8ded0;
+
+      max-width: 520px;
+
+      margin-bottom: 35px;
+    }
+
+    .hero button {
+      background: transparent;
+
+      border: 1px solid #b89b62;
+
+      color: #f7f3ed;
+
+      padding: 15px 30px;
+
+      font-family: Arial, sans-serif;
+
+      font-size: 12px;
+
+      letter-spacing: 2px;
+
+      cursor: pointer;
+
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: #b89b62;
+
+      color: #1c1a18;
+    }
+
+
+    /* =====================================================
+       ENCABEZADO DE LA TIENDA
+    ===================================================== */
+
+    .store-header {
+      text-align: center;
+
+      padding: 55px 20px 30px;
+    }
+
+    .store-header h2 {
+      font-size: 32px;
+
+      font-weight: 400;
+
+      letter-spacing: 3px;
+
+      color: #1c1a18;
+
+      margin-bottom: 10px;
+    }
+
+    .store-header p {
+      color: #756b61;
+
+      font-family: Arial, sans-serif;
+
+      font-size: 14px;
+
+      letter-spacing: 1px;
+    }
+
+
+    /* =====================================================
+       BENEFICIOS
+    ===================================================== */
+
+    .beneficios {
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      gap: 50px;
+
+      flex-wrap: wrap;
+
+      background-color: #1c1a18;
+
+      color: #f7f3ed;
+
+      padding: 18px 20px;
+    }
+
+    .beneficios span {
+      font-family: Arial, sans-serif;
+
+      font-size: 11px;
+
+      letter-spacing: 1.8px;
+
+      text-transform: uppercase;
+    }
+
+
+    /* =====================================================
+       CATÁLOGO
+    ===================================================== */
+
+    #productos {
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 30px;
+
+      max-width: 1250px;
+
+      margin: 0 auto;
+
+      padding: 25px 30px 60px;
+    }
+
+    .producto {
+      border: 1px solid #ded3c5;
+
+      background: #ffffff;
+
+      width: 250px;
+
+      padding: 14px;
+
+      text-align: center;
+
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .producto:hover {
+      transform: translateY(-7px);
+
+      box-shadow:
+        0 15px 35px rgba(28, 26, 24, 0.13);
+    }
+
+    .producto img {
+      width: 100%;
+
+      height: 280px;
+
+      object-fit: cover;
+
+      display: block;
+    }
+
+    .producto h3 {
+      color: #2a2420;
+
+      font-size: 20px;
+
+      font-weight: 400;
+
+      letter-spacing: 1px;
+
+      margin: 18px 0 8px;
+    }
+
+    .descripcion {
+      font-family: Arial, sans-serif;
+
+      font-size: 13px;
+
+      line-height: 1.6;
+
+      color: #756b61;
+
+      min-height: 42px;
+
+      margin-bottom: 10px;
+    }
+
+    .precio {
+      font-family: Arial, sans-serif;
+
+      font-size: 18px;
+
+      font-weight: bold;
+
+      color: #8c6f3e;
+
+      margin: 15px 0;
+    }
+
+
+    /* =====================================================
+       BOTÓN PRODUCTO
+    ===================================================== */
+
+    .producto button {
+      background-color: #1c1a18;
+
+      border: 1px solid #1c1a18;
+
+      color: #f7f3ed;
+
+      padding: 12px 20px;
+
+      margin-top: 5px;
+
+      cursor: pointer;
+
+      font-family: Arial, sans-serif;
+
+      font-size: 11px;
+
+      letter-spacing: 1.5px;
+
+      text-transform: uppercase;
+
+      transition: 0.3s;
+    }
+
+    .producto button:hover {
+      background-color: #b89b62;
+
+      border-color: #b89b62;
+
+      color: #1c1a18;
+    }
+
+
+    /* =====================================================
+       CARRITO
+    ===================================================== */
+
+    .carrito {
+      margin: 20px auto 70px;
+
+      padding: 35px;
+
+      background-color: #ffffff;
+
+      border: 1px solid #ded3c5;
+
+      width: 90%;
+
+      max-width: 700px;
+
+      box-shadow:
+        0 10px 30px rgba(28, 26, 24, 0.07);
+    }
+
+    .carrito h2 {
+      margin-top: 0;
+
+      color: #1c1a18;
+
+      font-size: 25px;
+
+      font-weight: 400;
+
+      letter-spacing: 2px;
+
+      border-bottom: 1px solid #ded3c5;
+
+      padding-bottom: 18px;
+    }
+
+    #lista-carrito {
+      padding-left: 20px;
+
+      font-family: Arial, sans-serif;
+    }
+
+    #lista-carrito li {
+      margin-bottom: 12px;
+
+      color: #4f4841;
+    }
+
+    .resumen {
+      border-top: 1px solid #ded3c5;
+
+      margin-top: 20px;
+
+      padding-top: 15px;
+
+      font-family: Arial, sans-serif;
+    }
+
+    .total {
+      font-size: 21px;
+
+      font-weight: bold;
+
+      color: #8c6f3e;
+    }
+
+
+    /* =====================================================
+       BOTÓN VACIAR
+    ===================================================== */
+
+    .vaciar {
+      background-color: transparent;
+
+      border: 1px solid #8c8177;
+
+      color: #5e554e;
+
+      padding: 11px 18px;
+
+      margin-top: 10px;
+
+      cursor: pointer;
+
+      font-family: Arial, sans-serif;
+
+      font-size: 11px;
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+
+      transition: 0.3s;
+    }
+
+    .vaciar:hover {
+      background-color: #2a2420;
+
+      border-color: #2a2420;
+
+      color: white;
+    }
+
+
+    /* =====================================================
+       BOTÓN FINALIZAR
+    ===================================================== */
+
+    .finalizar {
+      background-color: #b89b62;
+
+      border: 1px solid #b89b62;
+
+      color: #1c1a18;
+
+      padding: 11px 22px;
+
+      margin-top: 10px;
+
+      margin-left: 7px;
+
+      cursor: pointer;
+
+      font-family: Arial, sans-serif;
+
+      font-size: 11px;
+
+      font-weight: bold;
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+
+      transition: 0.3s;
+    }
+
+    .finalizar:hover {
+      background-color: #1c1a18;
+
+      border-color: #1c1a18;
+
+      color: #f7f3ed;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+      background-color: #1c1a18;
+
+      color: #e8ded0;
+
+      text-align: center;
+
+      padding: 35px 20px;
+    }
+
+    footer h3 {
+      color: #b89b62;
+
+      font-weight: 400;
+
+      letter-spacing: 4px;
+
+      margin: 0 0 10px;
+    }
+
+    footer p {
+      font-family: Arial, sans-serif;
+
+      font-size: 11px;
+
+      letter-spacing: 1.5px;
+
+      margin: 0;
+    }
+
+
+    /* =====================================================
+       RESPONSIVE
+    ===================================================== */
+
+    @media (max-width: 700px) {
+
+      .hero {
+        min-height: 430px;
+
+        padding: 50px 25px;
+
+        text-align: center;
+
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+
+        letter-spacing: 3px;
+      }
+
+      .hero-slogan {
+        font-size: 17px;
+      }
+
+      .beneficios {
+        gap: 18px;
+      }
+
+      #productos {
+        padding: 20px;
+
+        gap: 20px;
+      }
+
+      .producto {
+        width: 280px;
+      }
+
+      .carrito {
+        width: 92%;
+
+        padding: 25px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       BANNER
+  ===================================================== -->
+
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <p class="eyebrow">
+        COLECCIÓN EXCLUSIVA
+      </p>
+
+      <h1>
+        MAISON ÉLÉGANCE
+      </h1>
+
+      <p class="hero-slogan">
+        Bolsos icónicos que trascienden el tiempo.
+      </p>
+
+      <button
+        onclick="document.getElementById('productos').scrollIntoView({ behavior: 'smooth' })">
+
+        DESCUBRIR COLECCIÓN
+
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+       BENEFICIOS
+  ===================================================== -->
+
+  <div class="beneficios">
+
+    <span>✦ Envíos en Bogotá</span>
+
+    <span>✦ Compra segura</span>
+
+    <span>✦ Seguimiento de pedido</span>
+
+  </div>
+
+
+  <!-- =====================================================
+       ENCABEZADO CATÁLOGO
+  ===================================================== -->
+
+  <section class="store-header">
+
+    <h2>
+      LA COLECCIÓN
+    </h2>
+
+    <p>
+      Descubre piezas seleccionadas para acompañar cada ocasión.
+    </p>
+
+  </section>
+
+
+  <!-- =====================================================
+       PRODUCTOS
+       
+       IMPORTANTE:
+       Aquí puedes dejar tu JavaScript actual si ya tienes
+       una función que genera los productos.
+  ===================================================== -->
+
+  <div id="productos"></div>
+
+
+  <!-- =====================================================
+       CARRITO
+  ===================================================== -->
+
+  <div class="carrito">
+
+    <h2>
+      👜 Mi selección
+    </h2>
+
+    <ul id="lista-carrito"></ul>
+
+
+    <div class="resumen">
+
+      <p>
+        Envío:
+        <strong>Gratis</strong>
+      </p>
+
+      <p class="total">
+        Total:
+        $<span id="total">0</span>
+      </p>
+
+    </div>
+
+
+    <button
+      class="vaciar"
+      onclick="vaciarCarrito()">
+
+      Vaciar selección
+
+    </button>
+
+
+    <button
+      class="finalizar"
+      onclick="finalizarCompra()">
+
+      Finalizar compra
+
+    </button>
+
+  </div>
+
+
+  <!-- =====================================================
+       FOOTER
+  ===================================================== -->
+
+  <footer>
+
+    <h3>
+      MAISON ÉLÉGANCE
+    </h3>
+
+    <p>
+      BOLSOS QUE TRASCIENDEN EL TIEMPO
+    </p>
+
+  </footer>
+
+
+</body>
+</html>
